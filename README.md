@@ -65,3 +65,22 @@ O se puede utilizar el operador OR.
 `UPDATE usuario SET ciudad_nac = 'Manizales'  WHERE Identificación='114'`
 ![consulta11](/img/consulta11.png"consulta11")
 ![consulta11.2](/img/consulta11.2.png "consulta11.2")
+
+## INNER JOIN
+
+permite obtener datos de dos o mas tablas. Cuando se realiza la cancatenación de las tablas, no necesariamente se deben mostrar todos los datos de la tablas
+
+## Tabla pedidios
+![consulta11.2](/img/tabla%20pedidos.png"tabla pedidos")
+
+12. para visualizar los campos identicacion, nombre.apellidos, pedido.nropedido, pedidos.fechaVence, pedidos.obsevacion, FROM usuario INNER JOIN pedidios ON usuario. Identificación=pedidos.Identificación
+
+`SELECT usuario.Identificación, usuario.nombre, usuario.apellidos, pedidos.nropedido, pedidos.fechacompra, pedidios.fechavence, pedidos.observacion FROM usuarios INNER JOIN pedidios ON usuario.Identificación = pedidos.Identificación`
+
+![consulta12](/img/consulta12.png "consulta.12")
+
+13. para visualizar todos los campos de las tablas "usuario" y "pedido" donde identificación sea mayor que 100, se debe realizar la siguiente instruccion.
+
+`SELECT usuario.*, pedidos.* FROM usuario INNER JOIN pedidos ON usuario.identificacion = pedidos.identificacion WHERE usuario.identificacion > 100 `
+
+![consulta13](/img/consulta13.png "consulta.13")
